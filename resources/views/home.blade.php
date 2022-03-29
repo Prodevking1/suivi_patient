@@ -40,7 +40,7 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-bell"></i>
@@ -58,7 +58,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link d-block" href="{{route('logout')}}">
-                                <!-- {{Auth::User()->name}} -->
+
                                 <span style="color: red"><i class="far fa-user"></i> Deconexion</span>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -78,7 +78,7 @@
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                         <nav class="navbar navbar-expand-xl">
                             <div class="container h-100">
-                
+
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mx-auto h-100">
                                         <li class="nav-item">
@@ -116,12 +116,12 @@
                                                 Supprimer un dossier
                                             </a>
                                         </li>
-                                        
+
                                     </ul>
-                                    
+
                                 </div>
                             </div>
-                
+
                         </nav>
                     </div>
             </div>
@@ -129,8 +129,8 @@
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
-                    Copyright &copy; <b>2022</b> Tous droits reserves. 
-                    
+                    Copyright &copy; <b>2022</b> Tous droits reserves.
+
                 </p>
             </div>
         </footer>
@@ -166,7 +166,7 @@
 
             $(window).resize(function () {
                 updateLineChart();
-                updateBarChart();                
+                updateBarChart();
             });
         })
     </script>
