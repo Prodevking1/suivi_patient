@@ -54,7 +54,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link d-block" href="{{route('logout')}}">
-                                <!-- {{Auth::User()->name}} -->
+                                
                                 <span style="color: red"><i class="far fa-user"></i> Deconexion</span>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -68,7 +68,7 @@
         </nav>
         <div class="container tm-mt-big tm-mb-big">
       <div class="row">
-        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+        <form action="{{ route('dossiers.store') }}" class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
           <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -214,6 +214,7 @@
                           />
                         </div>
             </div>
+            
                   
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
@@ -239,7 +240,7 @@
             </form>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
         <footer class="tm-footer row tm-mt-small">

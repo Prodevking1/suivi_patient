@@ -58,7 +58,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link d-block" href="{{route('logout')}}">
-                                <!-- {{Auth::User()->name}} -->
+                                
                                 <span style="color: red"><i class="far fa-user"></i> Deconexion</span>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -113,7 +113,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="products.html">
                                                 <i class="fas fa-trash"></i>
-                                                Supprimer un dossier
+                                                Supprimer un dossierje
                                             </a>
                                         </li>
                                         
