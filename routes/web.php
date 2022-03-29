@@ -29,4 +29,4 @@ Route::group(['middleware' => ['auth']], function (){
     });
 });
 Route::resource('dossiers', DossierMedicalController::class);
-app::resource('dossiers', DossierMedicalController::class);
+#app::resource('dossiers', DossierMedicalController::class);
