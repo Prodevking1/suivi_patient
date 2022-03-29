@@ -36,7 +36,7 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-bell"></i>
@@ -98,8 +98,8 @@
                             data-large-mode="true"
                           />
                         </div>
-            </div> 
-            
+            </div>
+
             <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
                           <label
@@ -127,7 +127,96 @@
                             data-large-mode="true"
                           />
                         </div>
-            </div> 
+            </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="sex_patient"
+                            >Sexe
+                          </label>
+                          <input
+                            id="sex_patient"
+                            name="sex_patient"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                       <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="m_patient"
+                            >Mail
+                          </label>
+                          <input
+                            id="m_patient"
+                            name="m_patient"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+             </div>
+
+             <div  class="row">
+             <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="n_medsoi"
+                            >Nom du Medecin Soignant
+                          </label>
+                          <input
+                            id="n_medsoi"
+                            name="n_medsoi"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+              </div>
+              <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="tel_medsoi"
+                            >Numero du Medecin Soignant
+                          </label>
+                          <input
+                            id="tel_medsoi"
+                            name="tel_medsoi"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+              </div>
+
+             </div>
+
+             <div class ="row">
+             <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="n_medtrai"
+                            >Nom du Medecin Traitant
+                          </label>
+                          <input
+                            id="n_medtrai"
+                            name="n_medtrai"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+              </div>
+              <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="n_medtrai"
+                            >Telephone du Medecin Soignant
+                          </label>
+                          <input
+                            id="n_medtrai"
+                            name="n_medtrai"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+              </div>
+
+             </div>
+
 
             <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -156,7 +245,7 @@
                             data-large-mode="true"
                           />
                         </div>
-            </div> 
+            </div>
 
             <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -215,8 +304,43 @@
                           />
                         </div>
             </div>
+<<<<<<< HEAD
+            <div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="electro"
+                            >Electrophorese
+                          </label>
+                          <input
+                            id="electro"
+                            name="electro"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="poids"
+                            >Poids
+                          </label>
+                          <input
+                            id="poids"
+                            name="poids"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+
+
+            </div>
+
+=======
             
                   
+>>>>>>> 37f643cb7af5bad731eda65f6cef1bb1f6414737
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">
@@ -247,8 +371,8 @@
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
-                    Copyright &copy; <b>2022</b> Tous droits reserves. 
-                    
+                    Copyright &copy; <b>2022</b> Tous droits reserves.
+
                 </p>
             </div>
         </footer>
@@ -284,7 +408,7 @@
 
             $(window).resize(function () {
                 updateLineChart();
-                updateBarChart();                
+                updateBarChart();
             });
         })
     </script>
