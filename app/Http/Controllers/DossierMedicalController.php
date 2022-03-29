@@ -9,4 +9,20 @@ class DossierMedicalController extends Controller
     {
         return view('dossiers.create');
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function store(Request $request){
+        $dossier = new DossierMedical();
+        $dossier->n_patient = $request->n_patient;
+
+        
+        $dossier->save();
+        return redirect()->route('home');
+    }
 }

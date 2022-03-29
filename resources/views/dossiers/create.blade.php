@@ -68,7 +68,8 @@
         </nav>
         <div class="container tm-mt-big tm-mb-big">
       <div class="row">
-        <form action="{{ route('dossiers.store') }}" class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+        <form method="POST" action="{{ route('dossiers.store') }}" class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          @csrf
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
           <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -229,13 +230,13 @@
                   <input
                     type="button"
                     class="btn btn-primary btn-block mx-auto"
-                    value="UPLOAD PRODUCT IMAGE"
+                    value="Importer une photo"
                     onclick="document.getElementById('fileInput').click();"
                   />
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Add Product Now</button>
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Nouveau dossier</button>
               </div>
             </form>
             </div>

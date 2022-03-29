@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('id_patient');
+            /* $table->integer('id_patient');
             $table->string('n_patient');
             $table->string('prenom_patient');
             $table->string('sex_patient');
@@ -50,7 +50,7 @@ class CreateUsersTable extends Migration
             $table->string('id_medtrai');
             $table->string('nom_medtrai');
             $table->string('tel_medtrai');
-            $table->string('mdp_user');
+            $table->string('mdp_user'); */
         });
     }
 
