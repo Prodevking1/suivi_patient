@@ -15,6 +15,10 @@ class DossierMedicalController extends Controller
         return view('dossiers.index', compact('datas'));
 
     }
+
+    /* public function show(){
+        return view('dossiers.show');
+    } */
     /**
      * Show the form for editing the specified resource.
      *

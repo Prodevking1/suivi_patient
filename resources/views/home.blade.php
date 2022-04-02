@@ -103,16 +103,15 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">
+                                            <a class="nav-link" href="{{ route('dossiers.index')} }}">
                                                 <i class="fas fa-edit"></i>
                                                 Modifier un dossier
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <form class="nav-link" method="POST" action="" >
-                                                @csrf
-                                                @method('DELETE')
+                                            <form class="nav-link"  action="route('dossiers.index')}" >
+                                                
                                                 <i class="fas fa-trash"></i>
                                                 Supprimer un dossier
                                             </form>

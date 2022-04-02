@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\DossierMedicalController;
+use App\Models\DossierMedical;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,6 @@ Auth::routes();
 Route::get('/', function () {
     return view('home');
 });
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/patient', [App\Http\Controllers\ActeurController::class, 'user'])->name('patient');
 Route::get('/medecin', [App\Http\Controllers\ActeurController::class, 'admin'])->name('medecin');
@@ -28,7 +28,6 @@ Route::group(['middleware' => ['auth']], function (){
         Route::get('/medecin', [App\Http\Controllers\ActeurController::class, 'admin'])->name('medecin');
     });
 });
-Route::get('/', App\Http\Controllers\DossierMedicalController::class);
 Route::resource('dossiers', DossierMedicalController::class);
-Route::get('/search', \App\Http\Controllers\DossierMedicalController::class);
+
 #app::resource('dossiers', DossierMedicalController::class);
