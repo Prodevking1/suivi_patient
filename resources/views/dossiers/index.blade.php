@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{ route ('home')}}">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Tableau de bord
                                 <span class="sr-only">(current)</span>
@@ -71,60 +71,49 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Hopital: <b></b></p>
+                    <strong><p class="text-white mt-5 mb-5">Tous les dossiers: <b></b></p></strong>
                 </div>
             <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-                        <nav class="navbar navbar-expand-xl">
-                            <div class="container h-100">
-
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mx-auto h-100">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="{{ route('dossiers.create') }}">
-                                                <i class="fas fa-folder-plus"></i>
-                                                Nouveau dossier
-                                                <span class="sr-only">(current)</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="">
-                                                <i class="fas fa-file-medical"></i>
-                                                Remplir un rapport
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('dossiers.index')}}">
-                                                <i class="fas fa-search"></i>
-                                                Tous les dossiers
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="">
-                                                <i class="fas fa-edit"></i>
-                                                Modifier un dossier
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <form class="nav-link" method="POST" action="" >
-                                                @csrf
-                                                @method('DELETE')
-                                                <i class="fas fa-trash"></i>
-                                                Supprimer un dossier
-                                            </form>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
+                        
+                        <div class="row mt-4">
+                            <div class="form-group mb-3 col-xs-12 col-sm-10">
+                                <input class="form-control validate" data-large-mode="true" placeholder="Rosine Sawadogo"/>
                             </div>
 
-                        </nav>
+                            <div class="form-group mb-3">
+                                <button class="btn btn-primary btn-block text-uppercase">Rechercher</button>
+                            </div>
+                        </div>
+                        @foreach ($datas as $data)
+                        <table class="table mt-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span style="color:#F5A623">IDENTIFIANT</span></th>
+                                    <th scope="col"><span style="color:#F5A623">NOM</span></th>
+                                    <th scope="col"><span style="color:#F5A623">PRENOM</span></th>
+                                    <th scope="col"><span style="color:#F5A623">TELEPHONE</span></th>
+                                    <th scope="col"><span style="color:#F5A623">DERNIERE CONSULTATION</span></th>
+                                    <th scope="col"><span style="color:#F5A623">PROCHAIN RDV</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row "><b>#{{ $data->id_patient}}</th>
+                                    
+                                    <td><b>{{ $data->n_patient}}</b></td>
+                                    <td><b>{{ $data->p_patient}}</b></td>
+                                    <td><b>{{ $data->tel_patient}}</b></td>
+                                    <td>16:00, 12 NOV 2018</td>
+                                    <td>{{ $data->date_rdv}}</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        @endforeach
                     </div>
+
+                    
             </div>
         </div>
         <footer class="tm-footer row tm-mt-small">

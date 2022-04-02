@@ -142,81 +142,21 @@
                             class="form-control validate"
                             data-large-mode="true"
                           />
-                       <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="m_patient"
-                            >Mail
-                          </label>
-                          <input
-                            id="m_patient"
-                            name="m_patient"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-                        </div>
+                      </div>
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                        <label
+                          for="sit_mat"
+                          >Situation Matrimoniale
+                        </label>
+                        <input
+                          id="sit_mat"
+                          name="sit_mat"
+                          type="text"
+                          class="form-control validate"
+                          data-large-mode="true"
+                        />
+                    </div>
              </div>
-
-             <div  class="row">
-             <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="n_medsoi"
-                            >Nom du Medecin Soignant
-                          </label>
-                          <input
-                            id="n_medsoi"
-                            name="n_medsoi"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-              </div>
-              <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="tel_medsoi"
-                            >Numero du Medecin Soignant
-                          </label>
-                          <input
-                            id="tel_medsoi"
-                            name="tel_medsoi"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-              </div>
-
-             </div>
-
-             <div class ="row">
-             <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="n_medtrai"
-                            >Nom du Medecin Traitant
-                          </label>
-                          <input
-                            id="n_medtrai"
-                            name="n_medtrai"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-              </div>
-              <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="n_medtrai"
-                            >Telephone du Medecin Soignant
-                          </label>
-                          <input
-                            id="n_medtrai"
-                            name="n_medtrai"
-                            type="text"
-                            class="form-control validate"
-                            data-large-mode="true"
-                          />
-              </div>
-
-             </div>
-
 
             <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -304,7 +244,6 @@
                           />
                         </div>
             </div>
-<<<<<<< HEAD
             <div>
 
             <div class="row">
@@ -333,14 +272,40 @@
                             class="form-control validate"
                             data-large-mode="true"
                           />
-
+                        </div>
+                          
 
             </div>
 
-=======
             
-                  
->>>>>>> 37f643cb7af5bad731eda65f6cef1bb1f6414737
+            <div class="row">
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                    <label
+                      for="oper"
+                      >Derniere operation faite
+                    </label>
+                    <input
+                      id="oper"
+                      name="oper"
+                      type="text"
+                      class="form-control validate"
+                      data-large-mode="true"
+                    />
+                </div>
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                  <label
+                    for="date_rdv"
+                    >Date prochain Rdv
+                  </label>
+                  <input
+                    id="date_rdv"
+                    name="date_rdv"
+                    type="text"
+                    class="form-control validate"
+                    data-large-mode="true"
+                  />
+              </div>
+       </div>
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">
@@ -360,7 +325,7 @@
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Nouveau dossier</button>
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Ajouter le dossier</button>
               </div>
             </form>
             </div>

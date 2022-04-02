@@ -28,5 +28,7 @@ Route::group(['middleware' => ['auth']], function (){
         Route::get('/medecin', [App\Http\Controllers\ActeurController::class, 'admin'])->name('medecin');
     });
 });
+Route::get('/', App\Http\Controllers\DossierMedicalController::class);
 Route::resource('dossiers', DossierMedicalController::class);
+Route::get('/search', \App\Http\Controllers\DossierMedicalController::class);
 #app::resource('dossiers', DossierMedicalController::class);
