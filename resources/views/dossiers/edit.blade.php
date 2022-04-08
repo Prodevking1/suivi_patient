@@ -364,7 +364,6 @@
               class="form-control validate"
               value="{{ $dossier->notes }}"
               rows="3"
-              required
             ></textarea>
           </div>
         </div>

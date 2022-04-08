@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col">
                     <strong>
-                        <p class="text-white mt-5 mb-5">Tous les dossiers: <b></b></p>
+                        <p class="text-white mt-5 mb-5">Tous les dossiers<b></b></p>
                     </strong>
                 </div>
                 <div class="col-12 tm-block-col">
@@ -107,14 +107,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row "><b>#{{ $data->id_patient }}</th>
+                                    <tr style="font-size: 14px">
+                                        <th scope="row "><b>#{{ $data->id }}</th>
 
                                         <td><b>{{ $data->n_patient }}</b></td>
                                         <td><b>{{ $data->p_patient }}</b></td>
                                         <td><b>{{ $data->tel_patient }}</b></td>
-                                        <td>16:00, 12 NOV 2018</td>
-                                        <td>{{ $data->date_rdv }}</td>
+                                        <td><b>16:00, 12 NOV 2018</b></td>
+                                        <td><b>{{ $data->date_rdv }}</b></td>
                                         <td>
                                             <a 
                                                href="{{ route('dossiers.show', $data->id) }}" style="margin:5px; color:#F5A623;font-size: 30px">
@@ -127,13 +127,12 @@
 
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <form action="">
+                                            
                                                 @csrf
-                                                <input name="delete"  type="hidden" id="{{$data->id}}" value="{{$data->id}}" >
-                                            <a href="{{ route('dossier.destroy', ['id'=>$data]) }}" class="btn btn-danger" style="margin:5px">
+                                            <a href="{{ route('dossier.destroy', ['id'=>$data]) }}" style="color:hsl(37, 91%, 55%);font-size: 30px">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                        </form>
+                                        
                                             
                                         </td>
                                     </tr>

@@ -16,7 +16,6 @@ class DossierMedicalController extends Controller
         return view('dossiers.index', compact('datas'));
 
     }
-
     /**
      * Display a specified ressource from storage
      * 
@@ -98,7 +97,6 @@ class DossierMedicalController extends Controller
         $dossier->notes = $request->notes;
         
         $dossier->save();
-        
-        return redirect()->route('home');
+        return redirect()->route('home')->with("Dossier ajouter avec succes");
     }
 }
