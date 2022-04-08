@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter nouveau dossier</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Suivi Patient</title>
+    <link rel="stylesheet" href="../../fonts.googleapis.com/css01c8.css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="../../css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="../../css/main.css">
+
 </head>
-<body id="reportsPage">
+<body id="create">
     <div class="" id="home">
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <h1 class="tm-site-title mb-0">Suivi-Patient</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toga-toggle="collapse" data-target="#navbarSupportedContent"
@@ -27,7 +36,7 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-bell"></i>
@@ -45,7 +54,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link d-block" href="{{route('logout')}}">
-                                <!-- {{Auth::User()->name}} -->
+                                
                                 <span style="color: red"><i class="far fa-user"></i> Deconexion</span>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -55,8 +64,328 @@
                     </ul>
                 </div>
             </div>
+
         </nav>
-        
+        <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <form method="patch" action="{{ route('dossiers.update', $dossier->id) }}" class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          @csrf
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+          <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="nom_patient"
+                            >Nom
+                          </label>
+                          <input
+                            id="n_patient"
+                            value="{{ $dossier->n_patient }}"
+                            name="n_patient"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="nom_patient"
+                            >Prenom
+                          </label>
+                          <input
+                            id="p_patient"
+                            name="p_patient"
+                            value="{{ $dossier->p_patient }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+            </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="tel_patient"
+                            >Telephone
+                          </label>
+                          <input
+                            id="tel_patient"
+                            name="tel_patient"
+                            value="{{ $dossier->tel_patient }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="adr_patient"
+                            >Adresse
+                          </label>
+                          <input
+                            id="adr_patient"
+                            name="adr_patient"
+                            value="{{ $dossier->adr_patient }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+            </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="sex_patient"
+                            >Sexe
+                          </label>
+                          <input
+                            id="sex_patient"
+                            name="sex_patient"
+                            value="{{ $dossier->p_patient }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                      </div>
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                        <label
+                          for="sit_mat"
+                          >Situation Matrimoniale
+                        </label>
+                        <input
+                          id="sit_mat"
+                          name="sit_mat"
+                          value="{{ $dossier->sit_mat }}"
+                          type="text"
+                          class="form-control validate"
+                          data-large-mode="true"
+                        />
+                    </div>
+             </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="ant_med"
+                            >Antécédent médical
+                          </label>
+                          <input
+                            id="ant_med"
+                            name="ant_med"
+                            value="{{ $dossier->ant_med }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="m_rec"
+                            >Maladie récurrente
+                          </label>
+                          <input
+                            id="m_rec"
+                            name="m_rec"
+                            value="{{ $dossier->m_rec }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+            </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="grp_san"
+                            >Groupe sanguin
+                          </label>
+                          <input
+                            id="grp_san"
+                            name="grp_san"
+                            value="{{ $dossier->grp_san }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="al_med"
+                            >Alergie
+                          </label>
+                          <input
+                            id="al_med"
+                            name="al_med"
+                            value="{{ $dossier->al_med }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+            </div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="vacc"
+                            >Vaccins déja recu
+                          </label>
+                          <input
+                            id="vacc"
+                            name="vacc"
+                            value="{{ $dossier->vacc }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="ser"
+                            >Serums déja recus
+                          </label>
+                          <input
+                            id="ser"
+                            name="ser"
+                            value="{{ $dossier->ser }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+            </div>
+            <div>
+
+            <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="electro"
+                            >Electrophorese
+                          </label>
+                          <input
+                            id="electro"
+                            name="electro"
+                            value="{{ $dossier->electro }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label
+                            for="poids"
+                            >Poids
+                          </label>
+                          <input
+                            id="poids"
+                            name="poids"
+                            value="{{ $dossier->poids }}"
+                            type="text"
+                            class="form-control validate"
+                            data-large-mode="true"
+                          />
+                        </div>
+                          
+
+            </div>
+
+            
+            <div class="row">
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                    <label
+                      for="oper"
+                      >Derniere operation faite
+                    </label>
+                    <input
+                      id="oper"
+                      name="oper"
+                      value="{{ $dossier->oper }}"
+                      type="text"
+                      class="form-control validate"
+                      data-large-mode="true"
+                    />
+                </div>
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                  <label
+                    for="date_rdv"
+                    >Date prochain Rdv
+                  </label>
+                  <input
+                    id="date_rdv"
+                    name="date_rdv"
+                    value="{{ $dossier->date_rdv }}"
+                    type="text"
+                    class="form-control validate"
+                    data-large-mode="true"
+                  />
+              </div>
+
+       </div>
+
+       <div class="row">
+        <div class="form-group mb-3 col-xs-12 col-sm-6">
+            <label
+              for="date_cons"
+              >Date derniere consultation
+            </label>
+            <input
+              id="dat_cons"
+              name="date_cons"
+              value="{{ $dossier->date_cons }}"
+              type="text"
+              class="form-control validate"
+              data-large-mode="true"
+            />
+        </div>
+        <div class="form-group mb-3 col-xs-12 col-sm-6">
+          <label
+            for="n_person"
+            >Personne a prevenir </label
+          >
+          <input
+              id="n_danger"
+              name="n_danger"
+              value="{{ $dossier->n_danger }}"
+              type="text"
+              class="form-control validate"
+              data-large-mode="true"
+            />
+        </div>
+        <div class="row">
+          <div class="form-group mb-3 col-sm col-m">
+            <label
+              for="notes"
+              > Notes </label
+            >
+            <textarea
+            name="notes"
+              class="form-control validate"
+              value="{{ $dossier->notes }}"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+              
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Modifier le dossier</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+        <footer class="tm-footer row tm-mt-small">
+            <div class="col-12 font-weight-light">
+                <p class="text-center text-white mb-0 px-4 small">
+                    Copyright &copy; <b>2022</b> Tous droits reserves.
+
+                </p>
+            </div>
+        </footer>
     </div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -89,7 +418,7 @@
 
             $(window).resize(function () {
                 updateLineChart();
-                updateBarChart();                
+                updateBarChart();
             });
         })
     </script>

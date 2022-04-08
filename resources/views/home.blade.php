@@ -89,7 +89,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">
+                                            <a class="nav-link" href="{{ route('dossiers.index') }}">
                                                 <i class="fas fa-file-medical"></i>
                                                 Remplir un rapport
                                             </a>
@@ -103,18 +103,18 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('dossiers.index')} }}">
+                                            <a class="nav-link" href="{{ route('dossiers.index') }}">
                                                 <i class="fas fa-edit"></i>
                                                 Modifier un dossier
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <form class="nav-link"  action="route('dossiers.index')}" >
+                                            <a class="nav-link"  href="{{ route('dossiers.index') }}">
                                                 
                                                 <i class="fas fa-trash"></i>
                                                 Supprimer un dossier
-                                            </form>
+                                            </a>
                                         </li>
 
                                     </ul>

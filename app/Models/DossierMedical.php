@@ -23,17 +23,12 @@ class DossierMedical extends Model
         'vacc',
         'ser',
         'oper',
-        /* 'n_danger',
-        'p_danger',
-        'tel_danger', */
+        'n_danger',
+        'tel_danger',
         'sex_patient',
         'electro',
         'poids',
-        
-        /* 'n_medsoi',
-        'tel_medsoi',
-        'n_medtrai',
-        'tel_medtrai', */
+        'notes'
 
     ];
 }

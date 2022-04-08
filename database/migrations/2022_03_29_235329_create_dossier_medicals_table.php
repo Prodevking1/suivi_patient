@@ -14,13 +14,16 @@ class CreateDossierMedicalsTable extends Migration
     public function up()
     {
         Schema::create('dossier_medicals', function (Blueprint $table) {
-            $table->id('id_patient');
+            $table->id();
             $table->string('n_patient');
             $table->string('p_patient');
             $table->string('tel_patient');
             $table->string('adr_patient');
             $table->string('ant_med');
+            $table->string('n_danger');
             $table->string('date_rdv');
+            $table->string('date_cons');
+            $table->string('notes');
             $table->string('sit_mat');
             $table->string('m_rec');
             $table->string('grp_san');

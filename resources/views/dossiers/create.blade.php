@@ -19,7 +19,7 @@
     <div class="" id="home">
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <h1 class="tm-site-title mb-0">Suivi-Patient</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toga-toggle="collapse" data-target="#navbarSupportedContent"
@@ -305,25 +305,51 @@
                     data-large-mode="true"
                   />
               </div>
+
        </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                <div class="tm-product-img-dummy mx-auto">
-                  <i
-                    class="fas fa-cloud-upload-alt tm-upload-icon"
-                    onclick="document.getElementById('fileInput').click();"
-                  ></i>
-                </div>
-                <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
-                  <input
-                    type="button"
-                    class="btn btn-primary btn-block mx-auto"
-                    value="Importer une photo"
-                    onclick="document.getElementById('fileInput').click();"
-                  />
-                </div>
-              </div>
+
+       <div class="row">
+        <div class="form-group mb-3 col-xs-12 col-sm-6">
+            <label
+              for="date_cons"
+              >Date derniere consultation
+            </label>
+            <input
+              id="dat_cons"
+              name="date_cons"
+              type="text"
+              class="form-control validate"
+              data-large-mode="true"
+            />
+        </div>
+        <div class="form-group mb-3 col-xs-12 col-sm-6">
+          <label
+            for="n_person"
+            >Personne a prevenir </label
+          >
+          <input
+              id="n_danger"
+              name="n_danger"
+              type="text"
+              class="form-control validate"
+              data-large-mode="true"
+            />
+        </div>
+        <div class="row">
+          <div class="form-group mb-3 col-sm col-m">
+            <label
+              for="notes"
+              > Notes </label
+            >
+            <textarea
+            name="notes"
+              class="form-control validate"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+        </div>
+              
               <div class="col-12">
                 <button type="submit" class="btn btn-primary btn-block text-uppercase">Ajouter le dossier</button>
               </div>
