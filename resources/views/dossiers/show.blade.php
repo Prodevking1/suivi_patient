@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{route('home')}}">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Tableau de bord
                                 <span class="sr-only">(current)</span>
@@ -68,8 +68,9 @@
         </nav>
         <div class="container tm-mt-big tm-mb-big">
       <div class="row">
-        <form method="patch" action="{{ route('dossiers.update', $dossier->id) }}" class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
-          @csrf
+          
+        <form class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
           <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -77,11 +78,11 @@
                             for="nom_patient"
                             >Nom
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="n_patient"
-                            value="{{ $dossier->n_patient }}"
                             name="n_patient"
-                            type="text"
+                            readonly
+                            value="{{$dossier->n_patient}}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -91,11 +92,12 @@
                             for="nom_patient"
                             >Prenom
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="p_patient"
                             name="p_patient"
-                            value="{{ $dossier->p_patient }}"
                             type="text"
+                            readonly
+                            value="{{$dossier->p_patient}}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -108,9 +110,10 @@
                             for="tel_patient"
                             >Telephone
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="tel_patient"
                             name="tel_patient"
+                            readonly
                             value="{{ $dossier->tel_patient }}"
                             type="text"
                             class="form-control validate"
@@ -122,9 +125,10 @@
                             for="adr_patient"
                             >Adresse
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="adr_patient"
                             name="adr_patient"
+                            readonly
                             value="{{ $dossier->adr_patient }}"
                             type="text"
                             class="form-control validate"
@@ -139,11 +143,12 @@
                             for="sex_patient"
                             >Sexe
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="sex_patient"
                             name="sex_patient"
-                            value="{{ $dossier->p_patient }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->sex_patient }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -153,11 +158,12 @@
                           for="sit_mat"
                           >Situation Matrimoniale
                         </label>
-                        <input
+                         <input style="color: black;"
                           id="sit_mat"
                           name="sit_mat"
-                          value="{{ $dossier->sit_mat }}"
                           type="text"
+                          readonly
+                            value="{{ $dossier->sit_mat }}"
                           class="form-control validate"
                           data-large-mode="true"
                         />
@@ -170,12 +176,13 @@
                             for="ant_med"
                             >Antécédent médical
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="ant_med"
                             name="ant_med"
-                            value="{{ $dossier->ant_med }}"
                             type="text"
                             class="form-control validate"
+                            readonly
+                            value="{{ $dossier->ant_med }}"
                             data-large-mode="true"
                           />
                         </div>
@@ -184,11 +191,12 @@
                             for="m_rec"
                             >Maladie récurrente
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="m_rec"
                             name="m_rec"
-                            value="{{ $dossier->m_rec }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->m_rec }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -201,11 +209,12 @@
                             for="grp_san"
                             >Groupe sanguin
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="grp_san"
                             name="grp_san"
-                            value="{{ $dossier->grp_san }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->grp_san }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -215,11 +224,12 @@
                             for="al_med"
                             >Alergie
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="al_med"
                             name="al_med"
-                            value="{{ $dossier->al_med }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->al_med }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -232,11 +242,12 @@
                             for="vacc"
                             >Vaccins déja recu
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="vacc"
                             name="vacc"
-                            value="{{ $dossier->vacc }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->vacc }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -246,11 +257,12 @@
                             for="ser"
                             >Serums déja recus
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="ser"
                             name="ser"
-                            value="{{ $dossier->ser }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->ser }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -264,11 +276,12 @@
                             for="electro"
                             >Electrophorese
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="electro"
                             name="electro"
-                            value="{{ $dossier->electro }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->electro }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
@@ -278,18 +291,19 @@
                             for="poids"
                             >Poids
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="poids"
                             name="poids"
-                            value="{{ $dossier->poids }}"
                             type="text"
+                            readonly
+                            value="{{ $dossier->poids }}"
                             class="form-control validate"
                             data-large-mode="true"
                           />
                         </div>
                           
-
             </div>
+            
 
             
             <div class="row">
@@ -298,11 +312,12 @@
                       for="oper"
                       >Derniere operation faite
                     </label>
-                    <input
+                     <input style="color: black;"
                       id="oper"
                       name="oper"
-                      value="{{ $dossier->oper }}"
                       type="text"
+                      readonly
+                      value="{{ $dossier->oper }}"
                       class="form-control validate"
                       data-large-mode="true"
                     />
@@ -312,64 +327,70 @@
                     for="date_rdv"
                     >Date prochain Rdv
                   </label>
-                  <input
+                   <input style="color: black;"
                     id="date_rdv"
                     name="date_rdv"
-                    value="{{ $dossier->date_rdv }}"
+                    readonly
+                    value="{{ $dossier->tel_patient }}"
                     type="text"
                     class="form-control validate"
                     data-large-mode="true"
                   />
               </div>
-
        </div>
+              </div>
+              <div class="row">
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                    <label
+                      for="date_cons"
+                      >Date derniere consultation
+                    </label>
+                     <input style="color: black;"
+                      id="dat_cons"
+                      name="date_cons"
+                      type="text"
+                      readonly
+                    value="{{ $dossier->date_cons }}"
+                      class="form-control validate"
+                      data-large-mode="true"
+                    />
+                </div>
+                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                  <label
+                    for="n_person"
+                    >Personne a prevenir </label
+                  >
+                   <input style="color: black;" style="color: black;"
 
-       <div class="row">
-        <div class="form-group mb-3 col-xs-12 col-sm-6">
-            <label
-              for="date_cons"
-              >Date derniere consultation
-            </label>
-            <input
-              id="dat_cons"
-              name="date_cons"
-              value="{{ $dossier->date_cons }}"
-              type="text"
-              class="form-control validate"
-              data-large-mode="true"
-            />
-        </div>
-        <div class="form-group mb-3 col-xs-12 col-sm-6">
-          <label
-            for="n_person"
-            >Personne a prevenir </label
-          >
-          <input
-              id="n_danger"
-              name="n_danger"
-              value="{{ $dossier->n_danger }}"
-              type="text"
-              class="form-control validate"
-              data-large-mode="true"
-            />
-        </div>
-        <div class="row">
-          <div class="form-group mb-3 col-sm col-m">
-            <label
-              for="notes"
-              > Notes </label
-            >
-            <textarea
-            name="notes"
-              class="form-control validate"
-              value="{{ $dossier->notes }}"
-              rows="3"
-            ></textarea>
-          </div>
-        </div>
+                      id="n_danger"
+                      name="n_danger"
+                      type="text"
+                      readonly
+                    value="{{ $dossier->n_danger }}"
+                      class="form-control validate"
+                      data-large-mode="true"
+                    />
+                </div>
+                <div class="row">
+                  <div class="form-group mb-3 col-sm col-m">
+                    <label
+                      for="notes"
+                      > Notes </label
+                    >
+                     <input style="color: black;" style="color: black;"
+                    name="notes"
+                      class="form-control validate"
+                      rows="3"
+                      readonly
+                        value="{{ $dossier->notes }}"
+
+                    ></input>
+                  </div>
+                </div>
               
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Modifier le dossier</button>
+                <a href="{{ route('home')}}"
+                <button type="submit" class="btn btn-primary btn-block text-uppercase">Retourner a l'accueil</button> </a>
               </div>
             </form>
             </div>

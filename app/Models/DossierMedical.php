@@ -14,8 +14,7 @@ class DossierMedical extends Model
         'p_patient',
         'tel_patient',
         'adr_patient',
-        'm_patient',
-        'mdp_user',
+        'sit_mat',
         'ant_med',
         'date_rdv',
         'm_rec',
@@ -25,7 +24,11 @@ class DossierMedical extends Model
         'ser',
         'oper',
         'n_danger',
-        'p_danger',
         'tel_danger',
+        'sex_patient',
+        'electro',
+        'poids',
+        'notes'
+
     ];
 }

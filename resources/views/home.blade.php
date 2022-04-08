@@ -23,7 +23,7 @@
     <div class="" id="home">
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <h1 class="tm-site-title mb-0">Suivi-Patient</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toga-toggle="collapse" data-target="#navbarSupportedContent"
@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{ route('home') }}">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Tableau de bord
                                 <span class="sr-only">(current)</span>
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Hopital: <b></b></p>
+                    <p class="text-white mt-5 mb-5">Hopital: <span style="color: gold; font-size:26px; font-weight:600">{{ Auth::User()->hopital }}</span><b></b></p>
                 </div>
             <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
@@ -89,30 +89,31 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
+                                            <a class="nav-link" href="{{ route('dossiers.index') }}">
                                                 <i class="fas fa-file-medical"></i>
                                                 Remplir un rapport
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
+                                            <a class="nav-link" href="{{ route('dossiers.index')}}">
                                                 <i class="fas fa-search"></i>
-                                                Rechercher un dossier
+                                                Tous les dossiers
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
+                                            <a class="nav-link" href="{{ route('dossiers.index') }}">
                                                 <i class="fas fa-edit"></i>
                                                 Modifier un dossier
                                             </a>
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
+                                            <a class="nav-link"  href="{{ route('dossiers.index') }}">
+                                                
                                                 <i class="fas fa-trash"></i>
-                                                Supprimer un dossierje
+                                                Supprimer un dossier
                                             </a>
                                         </li>
 
@@ -127,10 +128,10 @@
         </div>
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
-                <p class="text-center text-white mb-0 px-4 small">
+                <h6 class="text-center text-white mb-0 px-4 sm">
                     Copyright &copy; <b>2022</b> Tous droits reserves.
 
-                </p>
+                </h6>
             </div>
         </footer>
     </div>

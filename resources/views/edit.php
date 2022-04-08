@@ -12,6 +12,7 @@
     <!-- https://fonts.google.com/specimen/Roboto -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="css/main.css">
@@ -23,7 +24,7 @@
         <nav class="navbar navbar-expand-xl">
             <div class="container h-100">
                 <a class="navbar-brand" href="index.html">
-                    <h1 class="tm-site-title mb-0">Panneau medecin</h1>
+                    <h1 class="tm-site-title mb-0">Suivi-Patient</h1>
                 </a>
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toga-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto h-100">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{ route ('home')}}">
                                 <i class="fas fa-tachometer-alt"></i>
                                 Tableau de bord
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fas fa-bell"></i>
                                 Notifications
                             </a>
                         </li>
@@ -56,78 +57,70 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link d-block" href="#">
-                                {{ Auth::user()->name }}, 
-                                <span style="color: red"> Deconexion</span>
+                            <a class="nav-link d-block" href="{{route('logout')}}">
+                                <span style="color: red"><i class="far fa-user"></i> Deconexion</span>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                </form>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-
         </nav>
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Hopital: <b></b></p>
+                    <strong><p class="text-white mt-5 mb-5">Tous les dossiers: <b></b></p></strong>
                 </div>
             <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
-                        <nav class="navbar navbar-expand-xl">
-                            <div class="container h-100">
-                
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mx-auto h-100">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="#">
-                                                <i class="fas fa-tachometer-alt"></i>
-                                                Nouveau dossier
-                                                <span class="sr-only">(current)</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
-                                                <i class="fas fa-shopping-cart"></i>
-                                                Remplir un rapport
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
-                                                <i class="fas fa-shopping-cart"></i>
-                                                Rechercher un dossier
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
-                                                <i class="fas fa-shopping-cart"></i>
-                                                Modifier un dossier
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products.html">
-                                                <i class="fas fa-shopping-cart"></i>
-                                                Supprimer un dossier
-                                            </a>
-                                        </li>
-                                        
-                                    </ul>
-                                    
-                                </div>
+                        
+                        <div class="row mt-4">
+                            <div class="form-group mb-3 col-xs-12 col-sm-10">
+                                <input class="form-control validate" data-large-mode="true" placeholder="Rosine Sawadogo"/>
                             </div>
-                
-                        </nav>
+
+                            <div class="form-group mb-3">
+                                <button class="btn btn-primary btn-block text-uppercase">Rechercher</button>
+                            </div>
+                        </div>
+                        @foreach ($datas as $data)
+                        <table class="table mt-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><span style="color:#F5A623">IDENTIFIANT</span></th>
+                                    <th scope="col"><span style="color:#F5A623">NOM</span></th>
+                                    <th scope="col"><span style="color:#F5A623">PRENOM</span></th>
+                                    <th scope="col"><span style="color:#F5A623">TELEPHONE</span></th>
+                                    <th scope="col"><span style="color:#F5A623">DERNIERE CONSULTATION</span></th>
+                                    <th scope="col"><span style="color:#F5A623">PROCHAIN RDV</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row "><b>#{{ $data->id_patient}}</th>
+                                    
+                                    <td><b>{{ $data->n_patient}}</b></td>
+                                    <td><b>{{ $data->p_patient}}</b></td>
+                                    <td><b>{{ $data->tel_patient}}</b></td>
+                                    <td>16:00, 12 NOV 2018</td>
+                                    <td>{{ $data->date_rdv}}</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        @endforeach
                     </div>
+
+                    
             </div>
         </div>
         <footer class="tm-footer row tm-mt-small">
             <div class="col-12 font-weight-light">
                 <p class="text-center text-white mb-0 px-4 small">
-                    Copyright &copy; <b>2022</b> Tous droits reserves. 
-                    
+                    Copyright &copy; <b>2022</b> Tous droits reserves.
+
                 </p>
             </div>
         </footer>
@@ -163,7 +156,7 @@
 
             $(window).resize(function () {
                 updateLineChart();
-                updateBarChart();                
+                updateBarChart();
             });
         })
     </script>
