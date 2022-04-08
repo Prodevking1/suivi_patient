@@ -78,7 +78,7 @@
                             for="nom_patient"
                             >Nom
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="n_patient"
                             name="n_patient"
                             readonly
@@ -92,7 +92,7 @@
                             for="nom_patient"
                             >Prenom
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="p_patient"
                             name="p_patient"
                             type="text"
@@ -110,7 +110,7 @@
                             for="tel_patient"
                             >Telephone
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="tel_patient"
                             name="tel_patient"
                             readonly
@@ -125,7 +125,7 @@
                             for="adr_patient"
                             >Adresse
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="adr_patient"
                             name="adr_patient"
                             readonly
@@ -143,7 +143,7 @@
                             for="sex_patient"
                             >Sexe
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="sex_patient"
                             name="sex_patient"
                             type="text"
@@ -158,7 +158,7 @@
                           for="sit_mat"
                           >Situation Matrimoniale
                         </label>
-                        <input
+                         <input style="color: black;"
                           id="sit_mat"
                           name="sit_mat"
                           type="text"
@@ -176,7 +176,7 @@
                             for="ant_med"
                             >Antécédent médical
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="ant_med"
                             name="ant_med"
                             type="text"
@@ -191,7 +191,7 @@
                             for="m_rec"
                             >Maladie récurrente
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="m_rec"
                             name="m_rec"
                             type="text"
@@ -209,7 +209,7 @@
                             for="grp_san"
                             >Groupe sanguin
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="grp_san"
                             name="grp_san"
                             type="text"
@@ -224,7 +224,7 @@
                             for="al_med"
                             >Alergie
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="al_med"
                             name="al_med"
                             type="text"
@@ -242,7 +242,7 @@
                             for="vacc"
                             >Vaccins déja recu
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="vacc"
                             name="vacc"
                             type="text"
@@ -257,7 +257,7 @@
                             for="ser"
                             >Serums déja recus
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="ser"
                             name="ser"
                             type="text"
@@ -276,7 +276,7 @@
                             for="electro"
                             >Electrophorese
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="electro"
                             name="electro"
                             type="text"
@@ -291,7 +291,7 @@
                             for="poids"
                             >Poids
                           </label>
-                          <input
+                           <input style="color: black;"
                             id="poids"
                             name="poids"
                             type="text"
@@ -312,7 +312,7 @@
                       for="oper"
                       >Derniere operation faite
                     </label>
-                    <input
+                     <input style="color: black;"
                       id="oper"
                       name="oper"
                       type="text"
@@ -327,7 +327,7 @@
                     for="date_rdv"
                     >Date prochain Rdv
                   </label>
-                  <input
+                   <input style="color: black;"
                     id="date_rdv"
                     name="date_rdv"
                     readonly
@@ -345,7 +345,7 @@
                       for="date_cons"
                       >Date derniere consultation
                     </label>
-                    <input
+                     <input style="color: black;"
                       id="dat_cons"
                       name="date_cons"
                       type="text"
@@ -360,7 +360,8 @@
                     for="n_person"
                     >Personne a prevenir </label
                   >
-                  <input
+                   <input style="color: black;" style="color: black;"
+
                       id="n_danger"
                       name="n_danger"
                       type="text"
@@ -376,14 +377,14 @@
                       for="notes"
                       > Notes </label
                     >
-                    <textarea
+                     <input style="color: black;" style="color: black;"
                     name="notes"
                       class="form-control validate"
                       rows="3"
                       readonly
                         value="{{ $dossier->notes }}"
 
-                    ></textarea>
+                    ></input>
                   </div>
                 </div>
               
