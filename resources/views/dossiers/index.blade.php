@@ -116,6 +116,7 @@
                                         <td><b>16:00, 12 NOV 2018</b></td>
                                         <td><b>{{ $data->date_rdv }}</b></td>
                                         <td>
+                                            
                                             <a 
                                                href="{{ route('dossiers.show', $data->id) }}" style="margin:5px; color:#F5A623;font-size: 30px">
 
@@ -129,9 +130,10 @@
                                             </a>
                                             
                                                 @csrf
-                                            <a href="{{ route('dossier.destroy', ['id'=>$data]) }}" style="color:hsl(37, 91%, 55%);font-size: 30px">
+                                                @method('DELETE')
+                                            <a href="{{ route('dossiers.delete', ['id'=>$data->id]) }}" style="color:hsl(37, 91%, 55%);font-size: 30px">
                                                 <i class="fas fa-trash"></i>
-                                            </a>
+                                            </a> 
                                         
                                             
                                         </td>
