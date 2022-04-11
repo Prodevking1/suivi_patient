@@ -46,9 +46,15 @@ class DossierMedicalController extends Controller
      * @param  Todo $todo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DossierMedical $dossier){
+    public function update(Request $request, $id){
 
-        $dossier->update($request->all());
+        $request->validate(
+            ['notes' => 'required']
+        );
+        /* $dossier->update($request->all()); */
+        $dossier = DossierMedical::where('id', $id);
+        $dossier -> notes = $request->get('notes');
+        $dossier -> save();
         return redirect()->route('dossier.index');
     }
 

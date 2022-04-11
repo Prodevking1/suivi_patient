@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         @foreach ($datas as $data)
-                            <table class="table mt-4">
+                            <table class="table mt-5">
                                 <thead>
                                     <tr>
                                         <th scope="col"><span style="color:#F5A623">IDENTIFIANT</span></th>

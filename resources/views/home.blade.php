@@ -68,10 +68,11 @@
                 </div>
             </div>
         </nav>
+        <p class="text-white text-center mt-5 mb-5">Nom du medecin: <span style="color: gold; font-size:26px; font-weight:600">{{ Auth::User()->name }}</span><b></b></p>
+
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Hopital: <span style="color: gold; font-size:26px; font-weight:600">{{ Auth::User()->hopital }}</span><b></b></p>
                 </div>
             <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
@@ -121,9 +122,12 @@
                                     </ul>
 
                                 </div>
+
                             </div>
 
                         </nav>
+                        <p style="margin-left:120px;" class="mt-2 text-white mt-5 mb-5">Centre de sante: <span style="margin-left:120px;color: gold; font-size:26px; font-weight:600">{{ Auth::User()->hopital }}</span><b></b></p>
+
                     </div>
             </div>
         </div>
